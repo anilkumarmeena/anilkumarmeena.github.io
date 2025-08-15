@@ -1,4 +1,4 @@
-name: Deploy React to GitHub Pages
+name: Deploy Vite React to GitHub Pages
 
 on:
   push:
@@ -21,25 +21,30 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Use Node
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+          cache: "npm"
 
-      - name: Install deps
+      - name: Install dependencies
         run: npm ci
 
       - name: Build
+        env:
+          CI: true
         run: npm run build
 
-      # SPA fallback so route refreshes work on GitHub Pages
+      # SPA fallback so BrowserRouter refreshes work on GitHub Pages
       - name: Add 404 fallback
-        run: cp build/index.html build/404.html
+        run: |
+          mkdir -p dist
+          cp dist/index.html dist/404.html
 
-      - name: Upload artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./build
+          path: ./dist
 
   deploy:
     needs: build
