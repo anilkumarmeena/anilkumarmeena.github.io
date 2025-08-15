@@ -8,44 +8,57 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 213 20% 14%;
+    --background: 8 12% 5%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 213 20% 14%;
+    --card: 12 10% 8%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 213 20% 14%;
+    --popover: 12 10% 8%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 213 84% 20%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 8 12% 5%;
 
-    --secondary: 213 20% 96%;
-    --secondary-foreground: 213 84% 20%;
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 213 20% 96%;
-    --muted-foreground: 213 12% 45%;
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 5% 65%;
 
-    --accent: 199 95% 55%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 142 86% 60%;
+    --accent-foreground: 8 12% 5%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 213 20% 90%;
-    --input: 213 20% 90%;
-    --ring: 213 84% 20%;
+    --border: 240 4% 16%;
+    --input: 240 4% 16%;
+    --ring: 217 91% 60%;
 
     --radius: 0.75rem;
 
-    /* Portfolio specific colors */
-    --tech-blue: 213 84% 20%;
-    --tech-cyan: 199 95% 55%;
-    --tech-gradient: linear-gradient(135deg, hsl(213 84% 20%), hsl(199 95% 55%));
-    --hero-gradient: linear-gradient(135deg, hsl(213 84% 20% / 0.95), hsl(199 95% 55% / 0.9));
-    --section-bg: 213 20% 98%;
-    --card-shadow: 213 20% 20% / 0.08;
-    --tech-glow: 199 95% 55% / 0.3;
+    /* Modern tech color palette */
+    --tech-blue: 217 91% 60%;
+    --tech-cyan: 180 100% 70%;
+    --tech-green: 142 86% 60%;
+    --tech-purple: 267 84% 81%;
+    --tech-orange: 25 95% 53%;
+    
+    /* Advanced gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(267 84% 81%));
+    --gradient-accent: linear-gradient(135deg, hsl(142 86% 60%), hsl(180 100% 70%));
+    --gradient-hero: linear-gradient(135deg, hsl(8 12% 5% / 0.98), hsl(240 4% 16% / 0.95));
+    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(217 91% 60% / 0.3), transparent 70%);
+    
+    /* Shadows and effects */
+    --shadow-glow: 0 0 30px hsl(217 91% 60% / 0.3);
+    --shadow-neon: 0 0 20px hsl(142 86% 60% / 0.4);
+    --shadow-card: 0 8px 32px hsl(8 12% 5% / 0.4);
+    
+    /* Animation variables */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -109,6 +122,127 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary));
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--accent));
+  }
+}
+
+/* Tech-inspired animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px hsl(var(--primary) / 0.3); }
+  50% { box-shadow: 0 0 40px hsl(var(--primary) / 0.6); }
+}
+
+@keyframes slide-in-left {
+  0% { 
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% { 
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  0% { 
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% { 
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes matrix-rain {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+/* Utility animations */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.6s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.6s ease-out;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out;
+}
+
+/* Hover effects */
+.hover-glow {
+  transition: var(--transition-smooth);
+}
+
+.hover-glow:hover {
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
+}
+
+.hover-scale {
+  transition: var(--transition-bounce);
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Tech grid background */
+.tech-grid {
+  background-image: 
+    linear-gradient(hsl(var(--primary) / 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--primary) / 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Code snippet styling */
+.code-block {
+  @apply bg-muted/50 border border-border rounded-lg p-4 font-mono text-sm;
+  background: linear-gradient(135deg, hsl(var(--muted) / 0.8), hsl(var(--card) / 0.9));
 }
