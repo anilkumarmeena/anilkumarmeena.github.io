@@ -9,34 +9,43 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 213 20% 14%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 213 20% 14%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 213 20% 14%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 213 84% 20%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 213 20% 96%;
+    --secondary-foreground: 213 84% 20%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 213 20% 96%;
+    --muted-foreground: 213 12% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 199 95% 55%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 213 20% 90%;
+    --input: 213 20% 90%;
+    --ring: 213 84% 20%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Portfolio specific colors */
+    --tech-blue: 213 84% 20%;
+    --tech-cyan: 199 95% 55%;
+    --tech-gradient: linear-gradient(135deg, hsl(213 84% 20%), hsl(199 95% 55%));
+    --hero-gradient: linear-gradient(135deg, hsl(213 84% 20% / 0.95), hsl(199 95% 55% / 0.9));
+    --section-bg: 213 20% 98%;
+    --card-shadow: 213 20% 20% / 0.08;
+    --tech-glow: 199 95% 55% / 0.3;
 
     --sidebar-background: 0 0% 98%;
 
