@@ -117,16 +117,24 @@ em {
   height: 64px;
 }
 
-.mark span {
-  display: grid;
-  place-items: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
+.mark {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mark img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
   border: 1px solid var(--line-hi);
-  background: linear-gradient(135deg, rgba(79, 209, 255, 0.18), rgba(139, 124, 246, 0.12));
-  font: 400 18px/1 var(--serif);
-  letter-spacing: 0.02em;
+}
+
+.mark span {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 nav {
@@ -236,7 +244,7 @@ nav a:hover {
   align-items: center;
   gap: 10px;
   margin: 0 0 26px;
-  padding: 4px 14px 4px 4px;
+  padding: 7px 14px;
   border-radius: 999px;
   border: 1px solid var(--line);
   background: var(--card);
@@ -1347,6 +1355,24 @@ h3 {
   color: var(--faint);
 }
 
+.school {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: -6px 0 0;
+  color: var(--muted);
+}
+
+.school svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: var(--warm);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 /* Contact */
 .cta {
   position: relative;
@@ -1412,7 +1438,8 @@ h3 {
 @media (max-width: 640px) {
   .wrap { padding: 0 16px; }
   nav { gap: 16px; font-size: 13px; }
-  nav a:not(.nav-cta):nth-child(2) { display: none; }
+  nav a:not(.nav-cta) { display: none; }
+  .mark span { font-size: 14px; }
   .hero { padding-top: 32px; gap: 8px; }
   .tagline { font-size: 18px; }
   .socials { margin-left: 0; }
