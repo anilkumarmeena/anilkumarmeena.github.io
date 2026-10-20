@@ -7,9 +7,8 @@
     <meta name="description" content="Anil Kumar Meena leads technology at Slike, the video platform of Times Internet: live streaming, players and data for millions of viewers, and autonomous agents for video, analytics and voice." />
     <meta name="author" content="Anil Kumar Meena" />
     <link rel="canonical" href="https://anilkumarmeena.github.io/" />
-    <meta name="theme-color" content="#fbfaf8" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#0c0e11" media="(prefers-color-scheme: dark)" />
-    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#07090d" />
+    <meta name="color-scheme" content="dark" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <meta property="og:type" content="profile" />
@@ -39,10 +38,7 @@
         "alumniOf": { "@type": "CollegeOrUniversity", "name": "Birla Institute of Technology, Mesra" },
         "address": { "@type": "PostalAddress", "addressRegion": "Delhi NCR", "addressCountry": "IN" },
         "email": "mailto:anil98meena@gmail.com",
-        "sameAs": [
-          "https://github.com/anilkumarmeena",
-          "https://www.linkedin.com/in/anil98meena"
-        ],
+        "sameAs": ["https://github.com/anilkumarmeena", "https://www.linkedin.com/in/anil98meena"],
         "knowsAbout": [
           "Video streaming", "HLS", "WebRTC", "Media processing", "AI agents", "Model Context Protocol",
           "Voice AI", "Retrieval-augmented generation", "Go", "Python", "TypeScript", "Kafka", "Elasticsearch"
@@ -52,160 +48,253 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/src/style.css" />
+    <script>document.documentElement.classList.add("js");</script>
   </head>
 
   <body>
+    <!-- Icon sprite (Lucide shapes) -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <defs>
+        <symbol id="i-scissors" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></symbol>
+        <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></symbol>
+        <symbol id="i-mic" viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v3"/></symbol>
+        <symbol id="i-play" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m10 8 6 4-6 4Z"/></symbol>
+        <symbol id="i-live" viewBox="0 0 24 24"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/><path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"/></symbol>
+        <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></symbol>
+        <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></symbol>
+        <symbol id="i-spark" viewBox="0 0 24 24"><path d="M9.94 15.5A2 2 0 0 0 8.5 14.06l-6.14-1.58a.5.5 0 0 1 0-.96L8.5 9.94A2 2 0 0 0 9.94 8.5l1.58-6.14a.5.5 0 0 1 .96 0l1.58 6.14a2 2 0 0 0 1.44 1.44l6.14 1.58a.5.5 0 0 1 0 .96l-6.14 1.58a2 2 0 0 0-1.44 1.44l-1.58 6.14a.5.5 0 0 1-.96 0z"/></symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
+        <symbol id="i-box" viewBox="0 0 24 24"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></symbol>
+        <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36z"/></symbol>
+        <symbol id="i-cc" viewBox="0 0 24 24"><rect width="18" height="14" x="3" y="5" rx="2"/><path d="M7 15h4M15 15h2M7 11h2M13 11h4"/></symbol>
+        <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+        <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+        <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></symbol>
+        <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/></symbol>
+        <symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+        <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+        <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+        <symbol id="i-cal" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+        <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></symbol>
+        <symbol id="i-github" viewBox="0 0 24 24"><path stroke="none" fill="currentColor" d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56l-.02-1.96c-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14l-.01 3.18c0 .31.21.68.8.56A11.53 11.53 0 0 0 23.5 12.02C23.5 5.74 18.27.5 12 .5Z"/></symbol>
+        <symbol id="i-linkedin" viewBox="0 0 24 24"><path stroke="none" fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></symbol>
+      </defs>
+    </svg>
+
     <a class="skip" href="#main">Skip to content</a>
+    <div class="bg" aria-hidden="true"></div>
 
     <header class="top">
       <div class="wrap top-row">
-        <a class="mark" href="#top" aria-label="Anil Kumar Meena, home">AM</a>
+        <a class="mark" href="#top" aria-label="Anil Kumar Meena, home"><span>AM</span></a>
         <nav aria-label="Sections">
-          <a href="#work">Work</a>
-          <a href="#open-source">Open source</a>
-          <a href="#experience">Experience</a>
-          <a href="#contact">Contact</a>
+          <a href="#build">Work</a>
+          <a href="#alfred">Alfred</a>
+          <a href="#journey">Journey</a>
+          <a class="nav-cta" href="#contact">Contact</a>
         </nav>
       </div>
     </header>
 
     <main id="main">
+      <!-- Hero -->
       <section class="hero wrap" id="top">
-        <p class="eyebrow">
-          <svg class="wave" viewBox="0 0 64 20" aria-hidden="true">
-            <rect x="0" y="7" width="3" height="6" rx="1.5" /><rect x="6" y="4" width="3" height="12" rx="1.5" />
-            <rect x="12" y="1" width="3" height="18" rx="1.5" /><rect x="18" y="5" width="3" height="10" rx="1.5" />
-            <rect x="24" y="2" width="3" height="16" rx="1.5" /><rect x="30" y="6" width="3" height="8" rx="1.5" />
-            <rect x="36" y="3" width="3" height="14" rx="1.5" /><rect x="42" y="7" width="3" height="6" rx="1.5" />
-            <rect x="48" y="4" width="3" height="12" rx="1.5" /><rect x="54" y="6" width="3" height="8" rx="1.5" />
-            <rect x="60" y="8" width="3" height="4" rx="1.5" />
-          </svg>
-          Tech Head, Slike · Times Internet
-        </p>
-        <h1>Anil Kumar Meena</h1>
-        <p class="lead">
-          I run technology at <a href="https://sli.ke">Slike</a>, the video platform behind Times Internet’s newsrooms.
-          We stream live news and run players and data pipelines for <strong>millions of viewers</strong>. On top of
-          that platform we build <strong>autonomous agents</strong> that cut and dub video, answer questions from live
-          data, and hold real-time conversations.
-        </p>
-        <p class="links">
-          <a href="mailto:anil98meena@gmail.com">Email</a>
-          <a href="https://www.linkedin.com/in/anil98meena">LinkedIn</a>
-          <a href="https://github.com/anilkumarmeena">GitHub</a>
-        </p>
+        <div class="hero-text">
+          <p class="pill"><span class="dot"></span>Tech Head · Slike, Times Internet</p>
+          <h1>Anil Kumar <span class="grad">Meena</span></h1>
+          <p class="tagline">
+            I lead technology at <a href="https://sli.ke">Slike</a>, where <em>live video</em>, data and
+            <em>autonomous agents</em> meet, for millions of viewers.
+          </p>
+          <div class="ctas">
+            <a class="btn btn-primary" href="#contact">Get in touch</a>
+            <a class="btn btn-ghost" href="#alfred">See Alfred <svg class="ic"><use href="#i-arrow"/></svg></a>
+            <span class="socials">
+              <a href="https://github.com/anilkumarmeena" aria-label="GitHub"><svg class="ic"><use href="#i-github"/></svg></a>
+              <a href="https://www.linkedin.com/in/anil98meena" aria-label="LinkedIn"><svg class="ic"><use href="#i-linkedin"/></svg></a>
+              <a href="mailto:anil98meena@gmail.com" aria-label="Email"><svg class="ic"><use href="#i-mail"/></svg></a>
+            </span>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="orb">
+            <span class="ring r1"></span><span class="ring r2"></span><span class="ring r3"></span>
+            <span class="core"></span>
+          </div>
+          <div class="eq">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+        </div>
       </section>
 
-      <section class="wrap section" id="work" aria-labelledby="work-h">
-        <h2 id="work-h">What I’m working on</h2>
-        <ol class="focus">
-          <li>
+      <!-- Stats -->
+      <section class="wrap" aria-label="At a glance">
+        <div class="stats reveal">
+        <div class="stat"><b>6+ yrs</b><span>building Times Internet video</span></div>
+        <div class="stat"><b>Millions</b><span>of viewers on the platform</span></div>
+        <div class="stat"><b>$250K+</b><span>saved every year</span></div>
+        <div class="stat"><b>4</b><span>company awards</span></div>
+        </div>
+      </section>
+
+      <!-- What I build -->
+      <section class="wrap section" id="build">
+        <header class="head reveal">
+          <p class="eyebrow">What I build</p>
+          <h2>Agents that <em>do the work</em></h2>
+        </header>
+        <div class="cards3">
+          <article class="card reveal">
+            <span class="icon c1"><svg><use href="#i-scissors"/></svg></span>
             <h3>Media agents</h3>
-            <p>Agents that turn long videos into shorts: they find the moments, reframe to 9:16, subtitle and dub.</p>
-          </li>
-          <li>
-            <h3>Analysts on live data</h3>
-            <p>Agents that answer questions from video, ad and audience data over MCP, without waiting on a dashboard.</p>
-          </li>
-          <li>
+            <p>Long videos in, shorts out: clipped, reframed, subtitled and dubbed.</p>
+            <ul class="chips"><li>Whisper</li><li>Face tracking</li><li>LLMs</li></ul>
+          </article>
+          <article class="card reveal">
+            <span class="icon c2"><svg><use href="#i-chart"/></svg></span>
+            <h3>AI analysts</h3>
+            <p>Questions answered straight from live video, ad and audience data.</p>
+            <ul class="chips"><li>MCP</li><li>Trino</li><li>Elasticsearch</li></ul>
+          </article>
+          <article class="card reveal">
+            <span class="icon c3"><svg><use href="#i-mic"/></svg></span>
             <h3>Voice agents</h3>
-            <p>Real-time voice assistants with retrieval and a live video avatar, grounded only in approved sources.</p>
+            <p>Real-time conversations with a live avatar, grounded in approved sources.</p>
+            <ul class="chips"><li>RAG</li><li>WebRTC</li><li>Speech</li></ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- Platform -->
+      <section class="wrap section" id="platform">
+        <header class="head reveal">
+          <p class="eyebrow">The platform</p>
+          <h2>One video stack, <em>end to end</em></h2>
+        </header>
+        <div class="tiles">
+          <div class="tile reveal"><svg class="tile-ic"><use href="#i-play"/></svg><h3>Players &amp; SDKs</h3><ul class="chips"><li>Web</li><li>iOS</li><li>Android</li><li>HLS.js</li></ul></div>
+          <div class="tile reveal"><svg class="tile-ic"><use href="#i-live"/></svg><h3>Live &amp; media</h3><ul class="chips"><li>RTMP</li><li>GStreamer</li><li>FFmpeg</li><li>DRM</li></ul></div>
+          <div class="tile reveal"><svg class="tile-ic"><use href="#i-db"/></svg><h3>Data</h3><ul class="chips"><li>Kafka</li><li>Spark</li><li>Elasticsearch</li><li>Trino</li></ul></div>
+          <div class="tile reveal"><svg class="tile-ic"><use href="#i-shield"/></svg><h3>Identity</h3><ul class="chips"><li>SSO</li><li>MFA</li><li>OAuth</li></ul></div>
+          <div class="tile reveal"><svg class="tile-ic"><use href="#i-spark"/></svg><h3>AI services</h3><ul class="chips"><li>Prompts</li><li>Transcription</li><li>Dubbing</li><li>TTS</li></ul></div>
+        </div>
+      </section>
+
+      <!-- Alfred -->
+      <section class="wrap section" id="alfred">
+        <div class="showcase reveal">
+          <div class="show-text">
+            <p class="eyebrow warm">Building now · Open source</p>
+            <h2 class="show-title">Alfred</h2>
+            <p class="show-lead">An autonomous voice agent that runs on <em>your own computer</em>.</p>
+            <ul class="feats">
+              <li><svg><use href="#i-mic"/></svg>On-device speech</li>
+              <li><svg><use href="#i-spark"/></svg>Claude reasoning</li>
+              <li><svg><use href="#i-cal"/></svg>Mail &amp; calendar</li>
+              <li><svg><use href="#i-code"/></svg>Background coding</li>
+              <li><svg><use href="#i-phone"/></svg>iOS &amp; Android</li>
+              <li><svg><use href="#i-lock"/></svg>Spoken-yes safety</li>
+            </ul>
+            <div class="ctas">
+              <a class="btn btn-primary" href="https://github.com/anilkumarmeena/alfred"><svg class="ic"><use href="#i-github"/></svg> View on GitHub</a>
+              <a class="btn btn-ghost" href="https://github.com/anilkumarmeena/alfred-app">Phone app <svg class="ic"><use href="#i-arrow"/></svg></a>
+            </div>
+          </div>
+          <div class="show-art" aria-hidden="true">
+            <svg viewBox="0 0 240 240">
+              <defs>
+                <radialGradient id="sg" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#4fd1ff" stop-opacity=".35"/><stop offset="1" stop-color="#4fd1ff" stop-opacity="0"/></radialGradient>
+              </defs>
+              <circle cx="120" cy="120" r="118" fill="url(#sg)"/>
+              <circle cx="120" cy="120" r="100" fill="none" stroke="#4fd1ff" stroke-opacity=".18" stroke-width="2"/>
+              <circle class="spin" cx="120" cy="120" r="82" fill="none" stroke="#4fd1ff" stroke-opacity=".6" stroke-width="7"/>
+              <circle class="spin-rev" cx="120" cy="120" r="66" fill="none" stroke="#4fd1ff" stroke-opacity=".38" stroke-width="3" stroke-dasharray="8 8"/>
+              <circle class="pulse" cx="120" cy="120" r="32" fill="#4fd1ff" fill-opacity=".18" stroke="#4fd1ff" stroke-opacity=".7" stroke-width="3"/>
+              <circle cx="120" cy="120" r="12" fill="#e9fbff"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="repos">
+          <a class="repo reveal" href="https://github.com/anilkumarmeena/alfred-app"><svg class="repo-ic"><use href="#i-phone"/></svg><h3>Alfred app</h3><p>Keeps listening with the screen locked</p><span class="lang"><i style="--c:#f05138"></i>Swift · Kotlin</span></a>
+          <a class="repo reveal" href="https://github.com/anilkumarmeena/ai-armory"><svg class="repo-ic"><use href="#i-box"/></svg><h3>AI Armory</h3><p>MCP tool sets in plain Python</p><span class="lang"><i style="--c:#3776ab"></i>Python</span></a>
+          <a class="repo reveal" href="https://github.com/anilkumarmeena/ai-agent-skills"><svg class="repo-ic"><use href="#i-compass"/></svg><h3>AI Agent Skills</h3><p>Plan-first skills for coding agents</p><span class="lang"><i style="--c:#8b7cf6"></i>Skills</span></a>
+          <a class="repo reveal" href="https://github.com/anilkumarmeena/vttkit"><svg class="repo-ic"><use href="#i-cc"/></svg><h3>VTTKit</h3><p>WebVTT toolkit for YouTube and HLS</p><span class="lang"><i style="--c:#3776ab"></i>Python</span></a>
+          <a class="repo reveal" href="https://github.com/anilkumarmeena/epochlens"><svg class="repo-ic"><use href="#i-clock"/></svg><h3>EpochLens</h3><p>Readable Unix timestamps, anywhere</p><span class="lang"><i style="--c:#f1e05a"></i>JavaScript</span></a>
+          <a class="repo reveal" href="https://github.com/anilkumarmeena/mediavue"><svg class="repo-ic"><use href="#i-search"/></svg><h3>MediaVue</h3><p>Find HLS/DASH streams on any page</p><span class="lang"><i style="--c:#f1e05a"></i>JavaScript</span></a>
+        </div>
+      </section>
+
+      <!-- Journey -->
+      <section class="wrap section" id="journey">
+        <header class="head reveal">
+          <p class="eyebrow">Journey · Times Internet, 2020 – now</p>
+          <h2>From intern to <em>Tech Head</em></h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="step now reveal">
+            <span class="node"></span>
+            <p class="when">Now</p>
+            <h3>Tech Head, Slike</h3>
+            <ul class="chips"><li>Players</li><li>Live</li><li>Data</li><li>Identity</li><li>AI agents</li></ul>
+          </li>
+          <li class="step reveal">
+            <span class="node"></span>
+            <p class="when">2022</p>
+            <h3>Tech Lead</h3>
+            <div class="metrics">
+              <div class="metric"><b>$200K+</b><span>a year saved · Webstudio live broadcasts</span></div>
+              <div class="metric"><b>+40%</b><span>video · AI article-to-video</span></div>
+              <div class="metric"><b>$50K</b><span>a year saved · central monitoring</span></div>
+            </div>
+          </li>
+          <li class="step reveal">
+            <span class="node"></span>
+            <p class="when">2021</p>
+            <h3>Full Stack Developer</h3>
+            <div class="metrics">
+              <div class="metric"><b>−50%</b><span>delivery cost · Cleo Player</span></div>
+              <div class="metric"><b>99.9%</b><span>uptime · 24/7 media engine</span></div>
+              <div class="metric"><b>−50%</b><span>processing time · asset management</span></div>
+            </div>
+          </li>
+          <li class="step reveal">
+            <span class="node"></span>
+            <p class="when">2020</p>
+            <h3>Software Developer &amp; Intern</h3>
+            <div class="metrics">
+              <div class="metric"><b>Millions</b><span>of users · event backend for TOI, ET, NBT</span></div>
+              <div class="metric"><b>−70%</b><span>editing time · live video editor</span></div>
+              <div class="metric"><b>3×</b><span>faster APIs · CMS from PHP to Go</span></div>
+              <div class="metric"><b>100M+</b><span>records a day · Kafka pipeline</span></div>
+            </div>
           </li>
         </ol>
 
-        <h3 class="sub">The platform under it</h3>
-        <dl class="platform">
-          <div><dt>Players &amp; SDKs</dt><dd>Web, iOS and Android players; live, chat and shorts SDKs</dd></div>
-          <div><dt>Live &amp; media</dt><dd>RTMP in, transcode, HLS out; DVR, DRM and social simulcast</dd></div>
-          <div><dt>Data</dt><dd>Player events, reporting, metadata pipelines and recommendations on Kafka, Spark, Elasticsearch and Trino</dd></div>
-          <div><dt>Identity</dt><dd>Single sign-on, MFA and social login across Slike products</dd></div>
-          <div><dt>AI layer</dt><dd>Shared prompts, transcription, dubbing, speech and cost tracking for every agent</dd></div>
-        </dl>
+        <div class="honors">
+          <div class="honor reveal"><svg><use href="#i-trophy"/></svg><div><b>Hack and Hustle 4.0</b><span>Winner · 2023</span></div></div>
+          <div class="honor reveal"><svg><use href="#i-award"/></svg><div><b>Aspire Award</b><span>2023 · 2022</span></div></div>
+          <div class="honor reveal"><svg><use href="#i-award"/></svg><div><b>Tiger Award</b><span>2021</span></div></div>
+          <div class="honor reveal"><svg><use href="#i-cap"/></svg><div><b>B.E. Computer Science</b><span>BIT Mesra · 2016 – 2020</span></div></div>
+        </div>
       </section>
 
-      <section class="wrap section" id="open-source" aria-labelledby="os-h">
-        <h2 id="os-h">Open source</h2>
-        <a class="feature" href="https://github.com/anilkumarmeena/alfred">
-          <span class="feature-tag">Building now</span>
-          <span class="feature-title">Alfred</span>
-          <span class="feature-text">
-            An autonomous voice agent that runs on your own computer. Speech stays on-device, Claude does the reasoning,
-            and it handles mail, calendar, coding and research in the background while you talk to it from your phone.
-            Anything that sends, deletes or spends waits for a spoken yes.
-          </span>
-          <span class="feature-meta">Python · macOS, Linux, WSL2 · iOS &amp; Android app <span class="arrow" aria-hidden="true">→</span></span>
-        </a>
-        <ul class="repos">
-          <li><a href="https://github.com/anilkumarmeena/alfred-app">Alfred app</a><span>Native LiveKit audio that keeps listening with the screen locked</span><em>Swift · Kotlin</em></li>
-          <li><a href="https://github.com/anilkumarmeena/ai-armory">AI Armory</a><span>MCP tool sets in plain Python: Google Workspace and Mac</span><em>Python</em></li>
-          <li><a href="https://github.com/anilkumarmeena/ai-agent-skills">AI Agent Skills</a><span>Planning and safe-execution skills for coding agents</span><em>Markdown</em></li>
-          <li><a href="https://github.com/anilkumarmeena/vttkit">VTTKit</a><span>Download, parse, merge and fix WebVTT subtitles, YouTube and HLS live included</span><em>Python</em></li>
-          <li><a href="https://github.com/anilkumarmeena/epochlens">EpochLens</a><span>Chrome extension that makes Unix timestamps readable</span><em>JavaScript</em></li>
-          <li><a href="https://github.com/anilkumarmeena/mediavue">MediaVue</a><span>Chrome extension that finds video, audio and HLS/DASH streams on a page</span><em>JavaScript</em></li>
-        </ul>
-      </section>
-
-      <section class="wrap section" id="experience" aria-labelledby="exp-h">
-        <h2 id="exp-h">Experience</h2>
-        <div class="company">
-          <p class="company-name">Times Internet <span>Noida · 2020 – now</span></p>
-          <p class="path">Intern <i>→</i> Software Developer <i>→</i> Full Stack Developer <i>→</i> Tech Lead <i>→</i> <b>Tech Head, Slike</b></p>
-        </div>
-
-        <div class="role">
-          <h3>Tech Lead</h3>
-          <ul class="wins">
-            <li><p><b>Webstudio.</b> TV-style live broadcasts from a laptop or phone, used by TOI, NBT and Maharashtra Times.</p><span>$200K+ a year saved</span></li>
-            <li><p><b>Article to video.</b> Newsroom articles turned into videos automatically.</p><span>40% more video</span></li>
-            <li><p><b>Central monitoring.</b> Health checks and automatic recovery on Kafka and Elasticsearch.</p><span>$50K a year saved</span></li>
-          </ul>
-        </div>
-        <div class="role">
-          <h3>Full Stack Developer</h3>
-          <ul class="wins">
-            <li><p><b>Cleo Player.</b> Live, simulive and VOD playback with DRM and subtitles.</p><span>50% lower delivery cost</span></li>
-            <li><p><b>Media engine.</b> 24/7 RTMP ingest, GStreamer transcoding and HLS out, simulcast to social.</p><span>99.9% uptime</span></li>
-            <li><p><b>Asset management.</b> Resumable uploads, DRM, subtitles and multi-audio.</p><span>50% faster processing</span></li>
-          </ul>
-        </div>
-        <div class="role">
-          <h3>Software Developer &amp; Intern</h3>
-          <ul class="wins">
-            <li><p><b>Event backend</b> for TOI, ET and NBT with real-time interactions.</p><span>Millions of users</span></li>
-            <li><p><b>Live video editor.</b> TV feeds to multi-bitrate HLS DVR with automatic clipping.</p><span>70% less editing time</span></li>
-            <li><p><b>CMS migration</b> from PHP to Go.</p><span>3× faster APIs</span></li>
-            <li><p><b>Backup pipeline</b> from Kafka to Elasticsearch, with alerting.</p><span>100M+ records a day</span></li>
-          </ul>
-        </div>
-
-        <div class="split">
-          <div>
-            <h3 class="sub">Recognition</h3>
-            <ul class="plain">
-              <li><b>Hack and Hustle 4.0</b>, winner <span>2023</span></li>
-              <li><b>Aspire Award</b> <span>2023, 2022</span></li>
-              <li><b>Tiger Award</b> <span>2021</span></li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="sub">Education</h3>
-            <ul class="plain">
-              <li><b>B.E. Computer Science</b><br />Birla Institute of Technology, Mesra <span>2016 – 2020</span></li>
-            </ul>
+      <!-- Contact -->
+      <section class="wrap section" id="contact">
+        <div class="cta reveal">
+          <h2>Let’s build <em>something</em></h2>
+          <p>Video, live streaming, agents, or Alfred: I’m happy to talk.</p>
+          <div class="ctas center">
+            <a class="btn btn-primary" href="mailto:anil98meena@gmail.com"><svg class="ic"><use href="#i-mail"/></svg> anil98meena@gmail.com</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/anil98meena"><svg class="ic"><use href="#i-linkedin"/></svg> LinkedIn</a>
+            <a class="btn btn-ghost" href="https://github.com/anilkumarmeena"><svg class="ic"><use href="#i-github"/></svg> GitHub</a>
           </div>
         </div>
-      </section>
-
-      <section class="wrap section contact" id="contact" aria-labelledby="contact-h">
-        <h2 id="contact-h">Get in touch</h2>
-        <p>Working on video, live streaming or agents, or want to try Alfred? I’m happy to talk.</p>
-        <p class="links">
-          <a href="mailto:anil98meena@gmail.com">anil98meena@gmail.com</a>
-          <a href="https://www.linkedin.com/in/anil98meena">LinkedIn</a>
-          <a href="https://github.com/anilkumarmeena">GitHub</a>
-        </p>
       </section>
     </main>
 
@@ -213,5 +302,14 @@
       <span>© 2026 Anil Kumar Meena</span>
       <span>Delhi NCR, India</span>
     </footer>
+
+    <script>
+      // Fade sections in as they scroll into view; everything stays visible without JS.
+      const io = new IntersectionObserver(
+        (entries) => entries.forEach((e) => e.isIntersecting && (e.target.classList.add("in"), io.unobserve(e.target))),
+        { rootMargin: "0px 0px -8% 0px" }
+      );
+      document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    </script>
   </body>
 </html>
