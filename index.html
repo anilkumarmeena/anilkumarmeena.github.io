@@ -103,7 +103,7 @@
       <!-- Hero -->
       <section class="hero wrap" id="top">
         <div class="hero-text">
-          <p class="pill"><span class="dot"></span>Tech Head · Slike, Times Internet</p>
+          <p class="pill"><img src="/avatar.jpg" alt="" width="26" height="26" />Tech Head · Slike, Times Internet<span class="dot"></span></p>
           <h1>Anil Kumar <span class="grad">Meena</span></h1>
           <p class="tagline">
             I lead technology at <a href="https://sli.ke">Slike</a>, where <em>live video</em>, data and
@@ -118,15 +118,64 @@
               <a href="mailto:anil98meena@gmail.com" aria-label="Email"><svg class="ic"><use href="#i-mail"/></svg></a>
             </span>
           </div>
+          <div class="brands">
+            <span>Video for</span>
+            <b>The Times of India</b><b>Navbharat Times</b><b>The Economic Times</b><b>Maharashtra Times</b>
+          </div>
         </div>
 
-        <div class="hero-art" aria-hidden="true">
-          <div class="orb">
-            <span class="ring r1"></span><span class="ring r2"></span><span class="ring r3"></span>
-            <span class="core"></span>
-          </div>
-          <div class="eq">
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        <!-- Hero art: a live news stream that agents clip, query and talk about -->
+        <div class="stage-wrap" aria-hidden="true">
+          <div class="stage">
+            <div class="glass player float-a">
+              <div class="screen">
+                <span class="sky"></span>
+                <span class="light"></span>
+                <span class="anchor"><i></i></span>
+                <span class="desk"></span>
+                <span class="live"><i></i>LIVE</span>
+                <span class="quality">HLS · 1080p</span>
+                <span class="lower"><b>BREAKING</b><span><i></i><i></i></span></span>
+              </div>
+              <div class="controls">
+                <svg class="ctl"><use href="#i-play"/></svg>
+                <div class="track">
+                  <i class="played"></i>
+                  <b style="left: 18%"></b><b style="left: 41%"></b><b style="left: 63%"></b><b style="left: 82%"></b>
+                </div>
+                <span class="time">4 highlights</span>
+              </div>
+            </div>
+
+            <div class="glass agent float-b">
+              <p class="card-head"><span class="badge c1"><svg><use href="#i-scissors"/></svg></span>Shorts agent<em class="run">running</em></p>
+              <ul class="steps">
+                <li style="--d: 0.4s"><span class="tick"></span>Found 4 highlights</li>
+                <li style="--d: 1.1s"><span class="tick"></span>Reframed to 9:16</li>
+                <li style="--d: 1.8s"><span class="tick"></span>Subtitled</li>
+                <li style="--d: 2.5s" class="busy"><span class="spinner"></span>Dubbing to Hindi</li>
+              </ul>
+            </div>
+
+            <div class="glass short float-c">
+              <div class="vert">
+                <span class="anchor small"><i></i></span>
+                <span class="caps"><i></i><i></i></span>
+              </div>
+              <p>Short ready <span>9:16</span></p>
+            </div>
+
+            <div class="glass analyst float-a">
+              <p class="card-head"><span class="badge c2"><svg><use href="#i-chart"/></svg></span>Analyst</p>
+              <p class="ask">“Where did this stream peak?”</p>
+              <div class="bars"><i style="--h: 38%"></i><i style="--h: 62%"></i><i style="--h: 48%"></i><i style="--h: 92%" class="hi"></i><i style="--h: 70%"></i><i style="--h: 54%"></i></div>
+            </div>
+
+            <div class="glass voice float-b">
+              <span class="badge c3"><svg><use href="#i-mic"/></svg></span>
+              <span>Voice agent</span>
+              <span class="eq"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+            </div>
           </div>
         </div>
       </section>
@@ -310,6 +359,12 @@
         { rootMargin: "0px 0px -8% 0px" }
       );
       document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+      // The hero stage is drawn at 560×490 and scaled to fit its column.
+      const wrap = document.querySelector(".stage-wrap");
+      const fit = () => wrap.style.setProperty("--s", Math.min(1, wrap.clientWidth / 560));
+      new ResizeObserver(fit).observe(wrap);
+      fit();
     </script>
   </body>
 </html>
